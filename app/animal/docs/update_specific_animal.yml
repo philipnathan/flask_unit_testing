@@ -1,0 +1,28 @@
+tags:
+    - Animal
+summary: Update a specific animal by ID
+parameters:
+    - name: animal_id
+      in: path
+      type: integer
+      required: true
+      description: The ID of the animal
+    - name: body
+      in: body
+      required: true
+      schema:
+          type: object
+          properties:
+              species:
+                  type: string
+              age:
+                  type: integer
+              gender:
+                  type: string
+              special_requirements:
+                  type: string
+responses:
+    200:
+        description: Animal data updated successfully
+    400:
+        description: Please check your input

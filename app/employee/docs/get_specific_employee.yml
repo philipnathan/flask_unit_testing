@@ -1,0 +1,14 @@
+tags:
+    - Employee
+summary: Get specific employee by ID
+parameters:
+    - name: employee_id
+      in: path
+      type: integer
+      required: true
+      description: The ID of the employee
+responses:
+    200:
+        description: Get employee by ID is Successful
+    400:
+        description: Please check your input

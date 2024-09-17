@@ -1,0 +1,45 @@
+tags:
+    - Employee
+summary: Create employee
+parameters:
+    - name: body
+      in: body
+      required: true
+      schema:
+          type: object
+          properties:
+              role:
+                  type: string
+              employee_detail:
+                  type: object
+                  properties:
+                      name:
+                          type: string
+                      email:
+                          type: string
+                      phone_number:
+                          type: string
+              schedule:
+                  type: object
+                  properties:
+                      sunday:
+                          type: string
+                      monday:
+                          type: string
+                      tuesday:
+                          type: string
+                      wednesday:
+                          type: string
+                      thursday:
+                          type: string
+                      friday:
+                          type: string
+                      saturday:
+                          type: string
+              status:
+                  type: string
+responses:
+    200:
+        description: Employee data created successfully
+    400:
+        description: Please check your input

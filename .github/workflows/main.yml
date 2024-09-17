@@ -1,0 +1,31 @@
+name: Final Module 6
+
+# Set Trigger = yang mentrigger test
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+# Step by step job
+jobs:
+    run-pytest:
+        name: Run Pytest
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout branch
+              uses: actions/checkout@v2
+            - name: Set up Python 3.12
+              uses: actions/setup-python@v2
+              with:
+                  python-version: 3.12
+            - name: Install pipenv
+              uses: dschep/install-pipenv-action@v1
+              with:
+                  version: 2023.10.24
+            - name: Install dependencies
+              run: pipenv install --deploy --system
+            - name: Test with pytest
+              id: pytest
+              working-directory: ./app
+              run: pipenv run pytest

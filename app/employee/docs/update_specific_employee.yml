@@ -1,0 +1,50 @@
+tags:
+    - Employee
+summary: Update a specific employee by ID
+parameters:
+    - name: employee_id
+      in: path
+      type: integer
+      required: true
+      description: The ID of the employee
+    - name: body
+      in: body
+      required: true
+      schema:
+          type: object
+          properties:
+              role:
+                  type: string
+              employee_detail:
+                  type: object
+                  properties:
+                      name:
+                          type: string
+                      email:
+                          type: string
+                      phone_number:
+                          type: string
+              schedule:
+                  type: object
+                  properties:
+                      sunday:
+                          type: string
+                      monday:
+                          type: string
+                      tuesday:
+                          type: string
+                      wednesday:
+                          type: string
+                      thursday:
+                          type: string
+                      friday:
+                          type: string
+                      saturday:
+                          type: string
+              status:
+                  type: string
+responses:
+    200:
+        description: Employee data updated successfully
+    400:
+        description: Please check your input

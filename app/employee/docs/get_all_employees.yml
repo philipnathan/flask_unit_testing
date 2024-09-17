@@ -1,0 +1,8 @@
+tags:
+    - Employee
+summary: Get all employees
+responses:
+    200:
+        description: Get all employees data is successful
+    400:
+        description: Failed to retrieve animals data

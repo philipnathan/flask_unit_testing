@@ -1,0 +1,14 @@
+tags:
+    - Animal
+summary: Get specific animal by ID
+parameters:
+    - name: animal_id
+      in: path
+      type: integer
+      required: true
+      description: The ID of the animal
+responses:
+    200:
+        description: Get animal by ID is Successful
+    400:
+        description: Please check your input

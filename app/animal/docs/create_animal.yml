@@ -1,0 +1,23 @@
+tags:
+    - Animal
+summary: Create a new Animal
+parameters:
+    - name: body
+      in: body
+      required: true
+      schema:
+          type: object
+          properties:
+              species:
+                  type: string
+              age:
+                  type: integer
+              gender:
+                  type: string
+              special_requirements:
+                  type: string
+responses:
+    200:
+        description: Animal data created Successfully
+    400:
+        description: Please check your input

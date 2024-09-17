@@ -1,0 +1,8 @@
+tags:
+    - Animal
+summary: Get all animals
+responses:
+    200:
+        description: Get all animal data is successful
+    400:
+        description: Failed to retrieve animals data

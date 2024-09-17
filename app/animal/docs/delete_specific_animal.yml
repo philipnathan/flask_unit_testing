@@ -1,0 +1,14 @@
+tags:
+    - Animal
+summary: Delete specific animal by ID
+parameters:
+    - name: animal_id
+      in: path
+      type: integer
+      required: true
+      description: The ID of the animal
+responses:
+    200:
+        description: Animal data deleted successfully
+    400:
+        description: Please check your animal ID

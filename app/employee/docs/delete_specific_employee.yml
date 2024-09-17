@@ -1,0 +1,14 @@
+tags:
+    - Employee
+summary: Delete specific employee by ID
+parameters:
+    - name: employee_id
+      in: path
+      type: integer
+      required: true
+      description: The ID of the employee
+responses:
+    200:
+        description: Employee data deleted successfully
+    400:
+        description: Please check your employee ID
